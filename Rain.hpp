@@ -28,6 +28,7 @@ class Rain{
     cube& blue;
     volatile unsigned long int* ti;
     uint8_t lit = 0;
+    uint8_t swap = 0;
     bool up = true;
     unsigned long start_time = 0;
     uint step = 300;
