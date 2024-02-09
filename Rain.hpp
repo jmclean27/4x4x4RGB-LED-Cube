@@ -30,7 +30,6 @@ class Rain{
     uint8_t lit = 0;
     bool up = true;
     unsigned long start_time = 0;
-    uint8_t state = 0;
     uint step = 300;
     uint8_t x, y = 0;
 

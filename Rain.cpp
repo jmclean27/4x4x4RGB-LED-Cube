@@ -26,21 +26,36 @@ void Rain::set(uint8_t x, uint8_t y, uint8_t z, uint8_t r,  uint8_t g, uint8_t b
 //     this->TopFull(x,y);
 // }
 
+// void Rain::RainUP(uint8_t x, uint8_t y){
+
+//     if(state == 0){
+//         this->set(x,y,state,4,0,0);
+//         state++;
+//         return;
+//     }
+//     if(state == 4){
+//         this->TopFull(x,y);
+//         state = 0;
+//         return;
+//     }
+//     this->set(x,y,state-1,0,0,0);  
+//     state++;     
+//     this->set(x,y,state-1,4,0,0);    
+// }
+
 void Rain::RainUP(uint8_t x, uint8_t y){
 
-    if(state == 0){
-        this->set(x,y,state,4,0,0);
-        state++;
+    if(lit % 4 == 0){
+        this->set(x,y,0,4,0,0);
         return;
     }
-    if(state == 4){
-        // this->TopFull(x,y);
-        state = 0;
+    this->set(x,y,(lit % 4) - 1,0,0,0);       
+    this->set(x,y,lit % 4,4,0,0);
+
+    if(lit % 4 == 3){
+        this->TopFull(x,y);
         return;
     }
-    this->set(x,y,state-1,0,0,0);  
-    state++;     
-    this->set(x,y,state-1,4,0,0);    
 }
 
 void Rain::RainDOWN(uint8_t x, uint8_t y){
@@ -55,8 +70,8 @@ void Rain::RainDOWN(uint8_t x, uint8_t y){
 }
 
 void Rain::rain(){
-    if(state == 0) start_time = *ti;
-    if(*ti - start_time < step*state) return;
+    if(lit % 4 == 0) start_time = *ti;
+    if(*ti - start_time < step * (lit % 4)) return;
     this->RandRain();
 }
 
@@ -80,9 +95,9 @@ void Rain::RandRain(){
             break;
         }
     }
-    
+
+    up == true ? this->RainUP(x, y) : this->RainDOWN(x, y); 
     lit++;
-    up == true ? this->RainUP(x, y) : this->RainDOWN(x, y);   
 }
 
 void Rain::TopFull(uint8_t x, uint8_t y){
