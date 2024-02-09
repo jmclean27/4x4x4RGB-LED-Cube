@@ -17,6 +17,7 @@ class Rain{
     void RainUP(uint8_t x, uint8_t y);
     void RainDOWN(uint8_t x, uint8_t y);
     void RandRain();
+    void RandPos();
     void TopFull(uint8_t x, uint8_t y);
 
 
@@ -31,6 +32,7 @@ class Rain{
     bool up = true;
     unsigned long start_time = 0;
     uint step = 300;
+    uint8_t lvl = 0, its = 0;
     uint8_t x, y = 0;
 
 };
