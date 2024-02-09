@@ -54,7 +54,7 @@ void Rain::rain(){
     if(*ti - start_time < step * lit) return;
     if(lit < 4) up == true ? this->RainUP(x, y) : this->RainDOWN(x, y); 
     lit++;
-    if(lit == 6){
+    if(lit == 4 + rainDelay){
         lit = 0;  
         swap++;
     }   

@@ -31,7 +31,8 @@ class Rain{
     uint8_t swap = 0;
     bool up = true;
     unsigned long start_time = 0;
-    uint step = 300;
+    uint step = 300;                //  adjusts the speed of the animation
     uint8_t x, y = 0;
+    uint8_t rainDelay = 2;          //  adjusts the delay between each rain
 
 };

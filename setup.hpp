@@ -4,6 +4,7 @@
 #include "led.hpp"
 #include "Launch.hpp"
 #include "Rain.hpp"
+#include "Tardis.hpp"
 
 #define l1_pin 23
 #define l2_pin 22
@@ -33,6 +34,7 @@ cube red, green, blue;
 LED led(red, green, blue);
 Launch launch(red,green,blue,&tick1);
 Rain rain(red,green,blue,&tick1);
+Tardis tardis(red,green,blue,&tick1);
 
 void load_O(uint8_t layer, bool horizontal = true);
 void load_M(uint8_t layer, bool horizontal = true);

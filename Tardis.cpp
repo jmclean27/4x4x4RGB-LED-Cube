@@ -16,22 +16,33 @@ void Tardis::set(uint8_t x, uint8_t y, uint8_t z, uint8_t r,  uint8_t g, uint8_t
 }
 
 
-void tardis(uint8_t x, uint8_t y, uint8_t z){
+void Tardis::tardis(uint8_t x, uint8_t y, uint8_t z){
+    if(step == 0){
+        this->MoveCube(rand() %3, rand() %3, rand () %3);
+        start_time = *ti;
+        rand();
+        step++;
+    }
 
 }
 
 
-void SmallCube(uint8_t x, uint8_t y, uint8_t z){
-
+void Tardis::MoveCube(uint8_t x, uint8_t y, uint8_t z){
+    for(uint8_t i = 0; i < 2; i++){
+        for(uint8_t j = 0; j < 2; j++){
+            this->set(x+j,y+0,z+i,0,0,4);
+            this->set(x+j,y+1,z+i,0,0,4);
+        }
+    }
 }
 
 
-void RandDir(){
-
+void Tardis::RandDir(){
+    QDir = rand() % 8;
 }
 
 
-void bump(){
+void Tardis::bump(){
 
 }
 
