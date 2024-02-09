@@ -15,33 +15,6 @@ void Rain::set(uint8_t x, uint8_t y, uint8_t z, uint8_t r,  uint8_t g, uint8_t b
     blue[z][y][x] = b;
 }
 
-// void Rain::RainUP(uint8_t x, uint8_t y){
-//     unsigned long start_time = *ti;
-//     int step = 300;
-//     for(uint8_t i = 0; i < 4; i++){
-//         this->set(x,y,i,4,0,0);
-//         while(*ti - start_time < step*(i+1)){}
-//         this->set(x,y,i,0,0,0);
-//     }
-//     this->TopFull(x,y);
-// }
-
-// void Rain::RainUP(uint8_t x, uint8_t y){
-
-//     if(state == 0){
-//         this->set(x,y,state,4,0,0);
-//         state++;
-//         return;
-//     }
-//     if(state == 4){
-//         this->TopFull(x,y);
-//         state = 0;
-//         return;
-//     }
-//     this->set(x,y,state-1,0,0,0);  
-//     state++;     
-//     this->set(x,y,state-1,4,0,0);    
-// }
 
 void Rain::RainUP(uint8_t x, uint8_t y){
 
@@ -59,14 +32,18 @@ void Rain::RainUP(uint8_t x, uint8_t y){
 }
 
 void Rain::RainDOWN(uint8_t x, uint8_t y){
-    unsigned long start_time = *ti;
-    int step = 300;
-    for(uint8_t i = 4; i > 0; i--){
-        this->set(x,y,i-1,0,0,4);
-        while(*ti - start_time < step*(5-i)){}
-        this->set(x,y,i-1,0,0,0);
+
+    if(lit % 4 == 0){
+        this->set(x,y,3,0,0,4);
+        return;
     }
-    this->TopFull(x,y);    
+    this->set(x,y,4 - lit % 4,0,0,0);       
+    this->set(x,y,(4 - lit % 4) - 1,0,0,4);
+
+    if(lit % 4 == 3){
+        this->TopFull(x,y);
+        return;
+    }   
 }
 
 void Rain::rain(){
