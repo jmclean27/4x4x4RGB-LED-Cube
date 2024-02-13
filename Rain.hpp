@@ -18,13 +18,17 @@ class Rain{
     void RainDOWN(uint8_t x, uint8_t y);
     void RandRain();
     void TopFull(uint8_t x, uint8_t y);
+<<<<<<< HEAD
     void RedRipple();
     void BlueRipple();
+=======
+>>>>>>> origin/master
 
 
 
     private:
 
+<<<<<<< HEAD
     // user adjustable variables
     uint step = 300;                //  adjusts the speed of the animation
     uint8_t rainDelay = 1;          //  adjusts the delay between each rain
@@ -32,6 +36,8 @@ class Rain{
     int16_t blueRippleSpeed = 500;  //  adjusts the ripple speed
 
     //  non user adjustable variables
+=======
+>>>>>>> origin/master
     cube& red;
     cube& green;
     cube& blue;
@@ -40,5 +46,12 @@ class Rain{
     uint8_t swap = 0;
     bool up = true;
     unsigned long start_time = 0;
+<<<<<<< HEAD
     uint8_t x, y = 0;
+=======
+    uint step = 300;                //  adjusts the speed of the animation
+    uint8_t x, y = 0;
+    uint8_t rainDelay = 2;          //  adjusts the delay between each rain
+
+>>>>>>> origin/master
 };

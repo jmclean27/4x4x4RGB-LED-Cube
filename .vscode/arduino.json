@@ -1,7 +1,15 @@
 {
+<<<<<<< HEAD
     "configuration": "PartitionScheme=default,FlashMode=qio,FlashFreq=80,UploadSpeed=921600,DebugLevel=none",
     "board": "esp32:esp32:esp32wrover",
     "programmer": "esptool",
     "sketch": "test.ino",
     "port": "COM3"
+=======
+    "configuration": "PartitionScheme=default,CPUFreq=80,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,LoopCore=1,EventsCore=1,DebugLevel=none,EraseFlash=none",
+    "board": "esp32:esp32:esp32da",
+    "programmer": "esptool",
+    "sketch": "test.ino",
+    "port": "COM7"
+>>>>>>> origin/master
 }
