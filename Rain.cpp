@@ -19,19 +19,11 @@ void Rain::set(uint8_t x, uint8_t y, uint8_t z, uint8_t r,  uint8_t g, uint8_t b
 void Rain::RainUP(uint8_t x, uint8_t y){
 
     if(lit == 0){
-<<<<<<< HEAD
         this->set(x,y,0,0,0,4);
         return;
     }
     this->set(x,y,lit - 1,0,0,0);       
     this->set(x,y,lit,0 + lit,0,4 - lit);
-=======
-        this->set(x,y,0,4,0,0);
-        return;
-    }
-    this->set(x,y,lit - 1,0,0,0);       
-    this->set(x,y,lit,4,0,0);
->>>>>>> origin/master
 
     if(lit == 3){
         this->TopFull(x,y);
@@ -42,19 +34,11 @@ void Rain::RainUP(uint8_t x, uint8_t y){
 void Rain::RainDOWN(uint8_t x, uint8_t y){
 
     if(lit == 0){
-<<<<<<< HEAD
         this->set(x,y,3,4,0,0);
         return;
     }
     this->set(x,y,4 - lit,0,0,0);       
     this->set(x,y,(4 - lit) - 1, 0 + lit,0,4 - lit);
-=======
-        this->set(x,y,3,0,0,4);
-        return;
-    }
-    this->set(x,y,4 - lit,0,0,0);       
-    this->set(x,y,(4 - lit) - 1,0,0,4);
->>>>>>> origin/master
 
     if(lit == 3){
         this->TopFull(x,y);
@@ -67,11 +51,8 @@ void Rain::rain(){
         this->RandRain();
         start_time = *ti;
     } 
-<<<<<<< HEAD
     if(*ti - start_time % redRippleSpeed) this->RedRipple();
     //if(*ti - start_time % blueRippleSpeed) this->BlueRipple();
-=======
->>>>>>> origin/master
     if(*ti - start_time < step * lit) return;
     if(lit < 4) up == true ? this->RainUP(x, y) : this->RainDOWN(x, y); 
     lit++;
@@ -96,7 +77,6 @@ void Rain::RandRain(){
 }
 
 void Rain::TopFull(uint8_t x, uint8_t y){
-<<<<<<< HEAD
     up == true ? this->set(x,y,3,3,0,0) : this->set(x,y,0,0,0,4);
 }
 
@@ -116,7 +96,4 @@ void Rain::BlueRipple(){
     uint8_t rnd = rand() % 2;
     if(blue.getLevel(0)[y1][x1] == 4) this->set(x1,y1,0,0,0,4 - rnd);
     else if(blue.getLevel(0)[y1][x1] == 3) this->set(x1,y1,0,0,0,3 + rnd);
-=======
-    up == true ? this->set(x,y,3,4,0,0) : this->set(x,y,0,0,0,4);
->>>>>>> origin/master
 }

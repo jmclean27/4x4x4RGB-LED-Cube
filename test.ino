@@ -53,14 +53,10 @@ void loop(){
     //led.rain();
     //led.small_cube();
     //launch.RFirework();
-<<<<<<< HEAD
 
     //rain.rain();
     //tardis.tardis();
     spiral.spiral();
-=======
-    rain.rain();
->>>>>>> origin/master
 
 
     // red.reset();

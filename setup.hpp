@@ -5,10 +5,7 @@
 #include "Launch.hpp"
 #include "Rain.hpp"
 #include "Tardis.hpp"
-<<<<<<< HEAD
 #include "Spiral.hpp"
-=======
->>>>>>> origin/master
 
 #define l1_pin 23
 #define l2_pin 22
@@ -39,10 +36,7 @@ LED led(red, green, blue);
 Launch launch(red,green,blue,&tick1);
 Rain rain(red,green,blue,&tick1);
 Tardis tardis(red,green,blue,&tick1);
-<<<<<<< HEAD
 Spiral spiral(red,green,blue,&tick1);
-=======
->>>>>>> origin/master
 
 void load_O(uint8_t layer, bool horizontal = true);
 void load_M(uint8_t layer, bool horizontal = true);
