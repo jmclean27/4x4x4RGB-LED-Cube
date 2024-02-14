@@ -20,7 +20,7 @@ void Tardis::tardis(){
     if(!step){
         this->DisplayCube(xyz[0][0], xyz[0][1], xyz[0][2]);
         start_time = *ti;
-        step++;
+        step = true;
         return;
     }
     if(*ti - start_time < speed) return;
@@ -90,8 +90,7 @@ void Tardis::Flash(){
         for(uint8_t i = 0; i < 3; i++){
             xyzF[i] = rand() % 4;
         }
-    // }while(this->FlashCrash(xyzF[0], xyzF[1], xyzF[2]));
-    }while(false);
+    }while(this->FlashCrash(xyzF[0], xyzF[1], xyzF[2]));
 
     uint8_t brightLight = rand() % 3;
     this->set(xyzF[0], xyzF[1], xyzF[2], 2 - brightLight, brightLight, 0);
@@ -99,11 +98,11 @@ void Tardis::Flash(){
 
 
 bool Tardis::FlashCrash(uint8_t x, uint8_t y, uint8_t z){
-    bool check = false;
-    if(x >= xyz[0][0] && x <= xyz[0][0]+1) check = true;
-    if(y >= xyz[0][1] && x <= xyz[0][1]+1) check = true;
-    if(z >= xyz[0][2] && x <= xyz[0][2]+1) check = true;
-    return check;
+    if(x != xyz[0][0] && x != xyz[0][0]+1) return false;
+    if(y != xyz[0][1] && x != xyz[0][1]+1) return false;
+    if(z != xyz[0][2] && x != xyz[0][2]+1) return false;
+    
+    return true;
 }
 
 

@@ -26,8 +26,8 @@ class Tardis{
     private:
 
     // user adjustable variables
-    uint speed = 300;                //  adjusts the speed of the animation
-    uint flashSpeed = 10;           //  adjusts the anount of flashes
+    unsigned int speed = 300;                //  adjusts the speed of the animation
+    unsigned int flashSpeed = 10;           //  adjusts the anount of flashes
 
 
     //  non user adjustable variables

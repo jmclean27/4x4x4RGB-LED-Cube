@@ -7,12 +7,7 @@
             "compilerArgs": [],
             "intelliSenseMode": "windows-gcc-x64",
             "includePath": [
-<<<<<<< HEAD
                 "${workspaceFolder}/**",
-                "C:\\Users\\Joe\\Documents\\C & C++\\4x4x4RGB-LED-Cube-master\\test"
-=======
-                "${workspaceFolder}/**"
->>>>>>> origin/master
             ],
             "forcedInclude": [],
             "cStandard": "c17",
@@ -238,11 +233,7 @@
                 "C:\\Users\\OTX-McLean\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.14\\tools\\sdk\\esp32\\include\\fb_gfx\\include",
                 "C:\\Users\\OTX-McLean\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.14\\tools\\sdk\\esp32\\qio_qspi\\include",
                 "C:\\Users\\OTX-McLean\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.14\\cores\\esp32",
-<<<<<<< HEAD
                 "C:\\Users\\OTX-McLean\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.14\\variants\\esp32",
-=======
-                "C:\\Users\\OTX-McLean\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.14\\variants\\esp32da",
->>>>>>> origin/master
                 "c:\\users\\otx-mclean\\appdata\\local\\arduino15\\packages\\esp32\\tools\\xtensa-esp32-elf-gcc\\esp-2021r2-patch5-8.4.0\\xtensa-esp32-elf\\include\\c++\\8.4.0",
                 "c:\\users\\otx-mclean\\appdata\\local\\arduino15\\packages\\esp32\\tools\\xtensa-esp32-elf-gcc\\esp-2021r2-patch5-8.4.0\\xtensa-esp32-elf\\include\\c++\\8.4.0\\xtensa-esp32-elf",
                 "c:\\users\\otx-mclean\\appdata\\local\\arduino15\\packages\\esp32\\tools\\xtensa-esp32-elf-gcc\\esp-2021r2-patch5-8.4.0\\xtensa-esp32-elf\\include\\c++\\8.4.0\\backward",
@@ -265,7 +256,6 @@
                 "IDF_VER=\"v4.4.6-dirty\"",
                 "ESP_PLATFORM",
                 "_POSIX_READER_WRITER_LOCKS",
-<<<<<<< HEAD
                 "F_CPU=240000000L",
                 "ARDUINO=10607",
                 "ARDUINO_ESP32_DEV",
@@ -276,19 +266,6 @@
                 "ESP32",
                 "CORE_DEBUG_LEVEL=0",
                 "BOARD_HAS_PSRAM",
-=======
-                "F_CPU=80000000L",
-                "ARDUINO=10607",
-                "ARDUINO_ESP32_WROOM_DA",
-                "ARDUINO_ARCH_ESP32",
-                "ARDUINO_BOARD=\"ESP32_WROOM_DA\"",
-                "ARDUINO_VARIANT=\"esp32da\"",
-                "ARDUINO_PARTITION_default",
-                "ESP32",
-                "CORE_DEBUG_LEVEL=0",
-                "ARDUINO_RUNNING_CORE=1",
-                "ARDUINO_EVENT_RUNNING_CORE=1",
->>>>>>> origin/master
                 "ARDUINO_USB_CDC_ON_BOOT=0",
                 "__DBL_MIN_EXP__=(-1021)",
                 "__FLT32X_MAX_EXP__=1024",
