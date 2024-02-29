@@ -62,15 +62,6 @@ void loop(){
     // red.reset();
     // green.reset();
     // blue.reset();
-
-    // load_O((4 - layer) % 4);
-    // load_M((5 - layer) % 4);
-    // load_A((6 - layer) % 4);
-    // load_R((7 - layer) % 4);
-
-    // layer == 3 ? layer = 0 : layer++;
-
-    // delay(1000);
 }
 
 
