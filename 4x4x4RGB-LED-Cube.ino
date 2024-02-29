@@ -57,11 +57,6 @@ void loop(){
     //rain.rain();
     //tardis.tardis();
     spiral.spiral();
-
-
-    // red.reset();
-    // green.reset();
-    // blue.reset();
 }
 
 
